@@ -1,8 +1,8 @@
 public class Zoo {
 	public static void main(String args[]) {
-		Animal wolf = new Animal("Wolf", 42, "Male", 176);
-		Animal squirrel = new Animal("Squirrel", 3, "Male", 14);
-		Animal turtle = new Animal("Turtle", 200, "Female", 1543);
+		Animal wolf = new Animal("Wolf", "Silver", 42, "Male", 176);
+		Animal squirrel = new Animal("Squirrel", "Tippy Toe", 3, "Male", 14);
+		Animal turtle = new Animal("Turtle", "Speedy", 200, "Female", 1543);
 		
 		wolf.describe();
 		squirrel.describe();
@@ -25,5 +25,25 @@ public class Zoo {
 		hawk.describe();
 		parrot.describe();
 		bluejay.describe();
+		
+		
+		wolf.eat();
+		wolf.sleep();
+		//wolf.swim(); //This won't work.
+		//wolf.fly(); //This won't work.
+		
+		shark.eat();
+		shark.sleep();
+		shark.swim();
+		//shark.fly(); //This won't work.
+		
+		hawk.eat();
+		hawk.sleep();
+		//hawk.swim(); //This won't work.
+		hawk.fly();
+		
+		
+		Chicken squawky = new Chicken("Chicken", "squawky", 12, "Female", 20);
+		squawky.fly();
 	}
 }
