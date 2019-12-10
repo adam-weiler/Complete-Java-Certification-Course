@@ -29,21 +29,24 @@ public class Zoo {
 		
 		wolf.eat();
 		wolf.sleep();
-		//wolf.swim(); //This won't work.
-		//wolf.fly(); //This won't work.
+//		wolf.swim();  // This won't work.
+//		wolf.fly();  // This won't work.
 		
 		shark.eat();
 		shark.sleep();
 		shark.swim();
-		//shark.fly(); //This won't work.
+//		shark.fly();  // This won't work.
 		
 		hawk.eat();
 		hawk.sleep();
-		//hawk.swim(); //This won't work.
-		hawk.fly();
+//		hawk.swim();  // This won't work.
+//		hawk.fly();  // This no longer works.
 		
 		
-		Chicken squawky = new Chicken("Chicken", "squawky", 12, "Female", 20);
-		squawky.fly();
+		Chicken squawky = new Chicken("Chicken", "Squawky", 12, "Female", 20);
+//		squawky.fly();  // Chickens cannot fly.
+		
+		Sparrow chirpy = new Sparrow("Sparrow", "Chirpy", 4, "Female", 2);
+		chirpy.fly();
 	}
 }
