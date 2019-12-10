@@ -6,4 +6,8 @@ public class Bird extends Animal {
 	public void eat() {
 		System.out.println("Caw caw caw...");
 	}
+	
+	public void move() {
+		System.out.println("Bird is flapping wings...");
+	}
 }
