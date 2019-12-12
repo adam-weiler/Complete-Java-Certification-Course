@@ -29,24 +29,19 @@ public class LoopsPractice {
 	public static void printCategories(String str) {
 //		System.out.println(str);
 		
-		int count = 0;
+		int i = 0;
 		
-		while(count <= str.length()) {
-			System.out.println("Count " + count);
+		while(true) {
+			System.out.println("i: " + i);
+			int found = str.indexOf("category:", i);
 			
-			int temp = str.indexOf("category", count);  // Searches for "category" in the string, starting at value count.
-			System.out.println("Temp" + temp);
+			if (found == -1) break;  // If all categories are found, break out of loop.
 			
+			int start = found + 9;  // +9 because that is length of "category:"
+			int end = str.indexOf(" ", start);  // Search for first occurrence of " ", using start as the starting point.
+			System.out.println(str.substring(start, end));  // Prints out apparal, makeup, and furniture.
 			
-			if (temp == -1) {  // If all categories are found, break out of loop.
-				break;
-			}
-			
-			String ourCategory = str.substring(temp + 9);  // +9 because that is length of "category:"
-			System.out.println(ourCategory);
-			
-			count = temp + 1;  // Count is set to index of current "category". ie: 68, 117, 118, or 150
-			System.out.println(" "); // 68, 117, 149
+			i = end + 1;  // i is set to index of current "category". ie: 85, 134, 168.
 		}
 	}
 
